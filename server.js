@@ -1,25 +1,32 @@
 var express = require('express');
 var app = express();
 
+app.set('view engine', 'pug');
+app.set('views','./views');
 app.use('/store', function(req, res, next){
-    console.log('Hej, jestem pośrednikiem przy żądaniu do /store');
+    console.log('Jestem pośrednikiem przy żądaniu do /store');
     next();
 });
 
 app.get('/', function (req, res) {
-    console.log('Otrzymałem żądanie GET do strony głównej');    
-    res.send('Hello world');
+    res.send('Hello world!');
 });
 
 app.get('/store', function (req, res) {
-    console.log('Otrzymałem żądanie GET do strony /store');    
     res.send('To jest sklep');
 });
 
-var server = app.listen(3000, 'localhost', function() {    
-    console.log('Przykładowa aplikacja nasłuchuje na http://' + host + ':' + port);
+app.get('/first-template', function(req, res){
+    res.render('first-template');
 });
 
-app.use(function(req, res, next) {
-    res.status(404).send('Nie można odnaleźć strony')
+app.get('/views', function(req, res){
+    res.render('content', {
+        url: "/views/google"
+    });
+});
+
+app.listen(3000);
+app.use(function (req, res, next) {
+    res.status(404).send('Wybacz, nie mogliśmy odnaleźć tego, czego żądasz!')
 });
