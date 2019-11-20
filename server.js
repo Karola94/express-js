@@ -50,22 +50,3 @@ app.get('/auth/google/callback',
     }));
 
 app.listen(3000);
-
-
-
-
-
-// app.get('/views', function(req, res){
-//     res.render('content', {
-//         url: "/views/google"
-//     });
-// });
-
-// app.get('/views/google', function(req, res){
-//     res.render('google');
-// });
-
-// app.listen(3000);
-// app.use(function (req, res, next) {
-//     res.status(404).send('Wybacz, nie mogliśmy odnaleźć tego, czego żądasz!')
-// });
