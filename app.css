@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    font-size: 60px;    
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.log, .sg {
+    color: #3180c4;
+    margin: 0;
+    padding: 0;
+}
+.g {
+    color: #3180c4;
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+.o, .e {
+    color: #c93838;
+    margin: 0;
+    padding: 0;
+}
+.so {
+    color: #ebbe44;
+    margin: 0;
+    padding: 0;
+}
+.l {
+    color: #3c9107;
+    margin: 0;
+    padding: 0;
+}
+.border {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    background: linear-gradient(45deg, #3180c4,#c93838,#ebbe44,#3c9107);
+    margin: 20px 0;
+    border-radius: 10px;
+}
+.desc {
+    width: 97%;
+    padding: 20px;
+    background: white;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+.btn-warning {
+    width: 150px;
+    padding: 0 10px 5px;
+    border-radius: 5px;
+    font-size: 25px;
+    text-align: center;
+}
+.btn-warning:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
