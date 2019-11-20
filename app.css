@@ -40,7 +40,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 70%;
-    background: linear-gradient(45deg, #3180c4,#c93838,#ebbe44,#3c9107);
+    background: linear-gradient(90deg, #3180c4,#c93838,#ebbe44,#3180c4,#3c9107,#c93838);
     margin: 20px 0;
     border-radius: 10px;
 }
@@ -61,4 +61,5 @@ body {
 .btn-warning:hover {
     text-decoration: none;
     font-weight: bold;
+    cursor: pointer;
 }

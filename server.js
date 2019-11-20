@@ -32,11 +32,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/', function(req, res){
-    res.render('auth/content', { user: req.user });
+    res.render('content', { user: req.user });
 });
 
 app.get('/auth/google', function(req, res){
-    res.render('google', { user: googleProfile });
+    res.render('google', { 
+        user: googleProfile,
+        // url: 'http://localhost:3000/auth/google'
+    });
 });
 
 app.get('/auth/google',
