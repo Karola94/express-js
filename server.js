@@ -16,10 +16,7 @@ app.get('/store', function (req, res) {
     res.send('To jest sklep');
 });
 
-var server = app.listen(3000, 'localhost', function() {    
-    console.log('Przykładowa aplikacja nasłuchuje na http://' + host + ':' + port);
-});
-
+app.listen(3000);
 app.use(function(req, res, next) {
     res.status(404).send('Nie można odnaleźć strony')
 });
